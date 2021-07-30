@@ -7,8 +7,48 @@
       <el-main>
         <template>
           <el-tabs v-model="activeName" @tab-click="handleClick">
-            <el-tab-pane label="材料信息" name="first">材料信息</el-tab-pane>
-            <el-tab-pane label="基本信息" name="second">基本信息</el-tab-pane>
+            <el-tab-pane label="材料信息" name="first">
+              <el-table
+                  :data="tableData"
+                  border
+                  style="width: 100%">
+                <el-table-column
+                    prop="date"
+                    label="日期"
+                    width="180">
+                </el-table-column>
+                <el-table-column
+                    prop="name"
+                    label="姓名"
+                    width="180">
+                </el-table-column>
+                <el-table-column
+                    prop="address"
+                    label="地址">
+                </el-table-column>
+              </el-table>
+            </el-tab-pane>
+            <el-tab-pane label="基本信息" name="second">
+              <el-table
+                  :data="tableData"
+                  border
+                  style="width: 100%">
+                <el-table-column
+                    prop="date"
+                    label="日期"
+                    width="180">
+                </el-table-column>
+                <el-table-column
+                    prop="name"
+                    label="姓名"
+                    width="180">
+                </el-table-column>
+                <el-table-column
+                    prop="address"
+                    label="地址">
+                </el-table-column>
+              </el-table>
+            </el-tab-pane>
           </el-tabs>
         </template>
       </el-main>
