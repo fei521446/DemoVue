@@ -7,6 +7,8 @@ import axios from 'axios'
 
 import "element-ui/lib/theme-chalk/index.css"
 
+import "./axios"
+
 Vue.use(Element)
 
 Vue.config.productionTip = false
@@ -17,3 +19,5 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+
