@@ -32,7 +32,8 @@ const routes = [
     path: '/AllopatryBirth/:AllopatryBirthId/edit',
     name: 'AllopatryBirthEdit',
     component: AllopatryBirthEdit
-  }
+}
+
 ]
 
 const router = new VueRouter({

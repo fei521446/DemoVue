@@ -4,7 +4,14 @@
       <el-aside width="200px">
         <Left></Left>
       </el-aside>
-      <el-main>Main</el-main>
+      <el-main>
+        <template>
+          <el-tabs v-model="activeName" @tab-click="handleClick">
+            <el-tab-pane label="材料信息" name="first">材料信息</el-tab-pane>
+            <el-tab-pane label="基本信息" name="second">基本信息</el-tab-pane>
+          </el-tabs>
+        </template>
+      </el-main>
     </el-container>
   </div>
 </template>
@@ -14,7 +21,17 @@ import Left from '../components/Left.vue'
 
 export default {
   name: "AllopatryBirth.vue",
-  components: {Left}
+  components: {Left},
+  data() {
+    return {
+      activeName: 'second'
+    };
+  },
+  methods: {
+    handleClick(tab, event) {
+      console.log(tab, event);
+    }
+  }
 }
 </script>
 
